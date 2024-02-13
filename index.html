@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
-  <title>Commentaires</title>
-</head>
-<body class="antialiased font-sans bg-white">
-  <div>
-    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6">      
-      <div class="bg-white">
-        <div>
-          <h3 class="text-lg font-medium text-warm-gray-900">Liste des commentaires</h3>          
-          <!-- COMMENTS  -->
-          <div id="comment-list" class="-my-4">
-                        
-              <div class="flex space-x-4 text-sm text-gray-500">
-                <div class="flex-1 py-10 ">
-                  <h3 class="font-medium text-gray-900">Emily Selman</h3>
-                  <div class="prose prose-sm mt-4 max-w-none text-gray-500">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis ratione eos ipsum incidunt, ut id debitis fugiat cumque omnis, exercitationem, dolores obcaecati maiores eaque architecto delectus distinctio odio et.</p>
-                  </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="dynamiser un commentaire en JavaScript">
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
+    <title>Commentaires</title>
+  </head>
+
+  <!--Début du Body-->
+  <body class="antialiased font-sans bg-white">
+    <div>
+      <!--Début des commentaires-->
+      <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6">      
+        <div class="bg-white">
+          <div>
+            <h3 class="text-lg font-medium text-warm-gray-900">Liste des commentaires</h3>  
+
+            <!--1er commentaire-->
+            <div id="comment-list" class="-my-4">         
+            <div class="flex space-x-4 text-sm text-gray-500">
+              <div class="flex-1 py-10 ">
+                <h3 class="font-medium text-gray-900">Emily Selman</h3>
+                <div class="prose prose-sm mt-4 max-w-none text-gray-500">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis ratione eos ipsum incidunt, ut id debitis fugiat cumque omnis, exercitationem, dolores obcaecati maiores eaque architecto delectus distinctio odio et.</p>
                 </div>
               </div>
-            
-              <div class="flex space-x-4 text-sm text-gray-500">
-                <div class="flex-1 py-10 border-t border-gray-200">
-                  <h3 class="font-medium text-gray-900">Hector Gibbons</h3>
-                  <div class="prose prose-sm mt-4 max-w-none text-gray-500">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, enim vitae quasi culpa est, excepturi cum voluptatum exercitationem id, deleniti similique maiores! Totam, itaque praesentium quod ipsa quos ratione et.</p>
-                  </div>
+            </div>
+            <!--Fin du 1er commentaire-->
+
+            <!--2nd commentaire-->
+            <div class="flex space-x-4 text-sm text-gray-500">
+              <div class="flex-1 py-10 border-t border-gray-200">
+                <h3 class="font-medium text-gray-900">Hector Gibbons</h3>
+                <div class="prose prose-sm mt-4 max-w-none text-gray-500">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, enim vitae quasi culpa est, excepturi cum voluptatum exercitationem id, deleniti similique maiores! Totam, itaque praesentium quod ipsa quos ratione et.</p>
                 </div>
               </div>
-            
-              <div class="flex space-x-4 text-sm text-gray-500">
-                <div class="flex-1 py-10 border-t border-gray-200">
-                  <h3 class="font-medium text-gray-900">Mark Edwards</h3>
-                  <div class="prose prose-sm mt-4 max-w-none text-gray-500">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae accusantium quae doloribus. Nobis ipsam libero asperiores a velit ab nemo facere molestias quisquam. Libero, repudiandae dignissimos. Doloribus hic placeat soluta?</p>
-                  </div>
+            </div>
+            <!--Fin du 2nd commentaire-->
+
+            <!--3e commentaire-->
+            <div class="flex space-x-4 text-sm text-gray-500">
+              <div class="flex-1 py-10 border-t border-gray-200">
+                <h3 class="font-medium text-gray-900">Mark Edwards</h3>
+                <div class="prose prose-sm mt-4 max-w-none text-gray-500">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae accusantium quae doloribus. Nobis ipsam libero asperiores a velit ab nemo facere molestias quisquam. Libero, repudiandae dignissimos. Doloribus hic placeat soluta?</p>
                 </div>
               </div>
-            
+            </div>
+            <!--Fin du 3e commentaire-->  
           </div>
         </div>
       </div>
+      <!--Fin de section-->
+    
+      <!--Nouveau Commentaire-->
       <div class="py-10 lg:col-span-2 xl:py-12">
         <h3 class="text-lg font-medium text-warm-gray-900">Écrire un commentaire</h3>
-        <!-- ALERT MESSAGE -->
+        <!--Fin de section-->
+       
+        <!--Message d'erreur-->
         <div id="error-message" style="display: none;" class="mt-4 mx-auto max-w-4xl">        
           <div class="rounded-md bg-red-50 p-4">
             <div class="flex">
@@ -63,20 +76,29 @@
             </div>
           </div>          
         </div>
-        <!-- FORM  -->
-        <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <!--Fin du message d'erreur-->
+      
+        <!--Début du formulaire-->
+        <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" id="form">
+          <!--Section du Prénom-->
           <div>
             <label for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
             <div class="mt-1">
               <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500">
             </div>
           </div>
+          <!--Fin de section-->
+
+          <!--Section du Nom-->
           <div>
             <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Nom</label>
             <div class="mt-1">
               <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500">
             </div>
           </div>
+          <!--Fin de section-->
+
+          <!--Début section de Commentaire-->
           <div class="sm:col-span-2">
             <div class="flex justify-between">
               <label for="message" class="block text-sm font-medium text-warm-gray-900">Commentaire</label>
@@ -86,15 +108,27 @@
               <textarea id="message" name="message" rows="4" maxlength="500" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500" aria-describedby="message-max"></textarea>
             </div>
           </div>
+          <!--Fin de section-->
+
+          <!--Bouton Envoyer-->
           <div class="sm:col-span-2 sm:flex sm:justify-end">
             <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
               Envoyer
             </button>
           </div>
-        </form>
-      </div>
+          <!--Fin du bouton-->
+
+          <!--Début du Script-->
+          
+        <!--Fin du Script-->
+      
+      </form>
+      <!--Fin du Formulaire-->
+
     </div>
   </div>
-</div>
+
 </body>
+<!--Fin du Body-->
+
 </html>
