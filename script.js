@@ -25,6 +25,7 @@ function clearForm () {
 //soumission du form
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    
 //On prend les valeurs
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
