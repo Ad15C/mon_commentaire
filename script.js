@@ -14,7 +14,6 @@
 //Function myFunction
 function myFunction () {
     document.getElementById('form').reset();
-    return newComment;
 };
 
 //soumission du form
