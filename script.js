@@ -40,5 +40,6 @@ formulaire.addEventListener("submit", (event) => {
 
 //On réinitialise le formulaire   
     myFunction();
+    newComment ();
     }
 });
