@@ -10,7 +10,6 @@
     const newComment = sampleComment.cloneNode(true);
     const newCommentH3 = newComment.querySelector(".font-medium, .text-gray-900");
     const newCommentP = newComment.querySelector(".prose, .prose-sm, .mt-4, .max-w-none, .text-gray-500");
-  
 
 //Function myFunction
 function myFunction () {
@@ -29,7 +28,6 @@ formulaire.addEventListener("submit", (event) => {
 //On vérifie si les champs sont vides
     if (!firstName|| !lastName|| !message ) {
     errorMessage.style.display = 'block';
-    console.log("un ou plusieurs champs ne sont pas correctement remplis");
     } else {
     errorMessage.style.display = 'none';
     newCommentH3.textContent = `${firstName} ${lastName}`;
@@ -40,6 +38,6 @@ formulaire.addEventListener("submit", (event) => {
 
 //On réinitialise le formulaire   
     myFunction();
-    newComment ();
+    return newComment; 
     }
 });
