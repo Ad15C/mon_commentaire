@@ -37,9 +37,8 @@ formulaire.addEventListener("submit", (event) => {
     
 // ajout le clone dans le dom
     commentList.appendChild(newComment);
+
 //On réinitialise le formulaire   
     myFunction();
+    }
 });
-    
-
-    
