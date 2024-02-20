@@ -14,6 +14,7 @@
 //Function myFunction
 function myFunction () {
     document.getElementById('form').reset();
+    return newComment;
 };
 
 //soumission du form
@@ -37,7 +38,6 @@ formulaire.addEventListener("submit", (event) => {
     commentList.appendChild(newComment);
 
 //On réinitialise le formulaire   
-    myFunction();
-    return newComment; 
+    myFunction(); 
     }
 });
